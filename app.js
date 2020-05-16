@@ -9,16 +9,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-    var sum = a+b;
+    var sum = a + b;
     // `The sum of 4 and 7 is 11.`
     var msg = `The sum of ${a} and ${b} is ${sum}.`;
-    return [sum,msg];
+    return [sum, msg];
 }
 
 
 
 // Here is the test for sum(); uncomment it to run it
-4,7
+4, 7
 testSum();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -33,14 +33,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-        var multiply = a*b;
-        // `The sum of 4 and 7 is 11.`
-        var msg = `The product of ${a} and ${b} is ${multiply}.`;
-        return [multiply,msg];
+    var multiply = a * b;
+    // `The sum of 4 and 7 is 11.`
+    var msg = `The product of ${a} and ${b} is ${multiply}.`;
+    return [multiply, msg];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-5,9
+5, 9
 testMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -57,13 +57,29 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sumAndMultiply(a, b, c) {
+
+    var sumc = sum(a, b)[0];
+    var sumd = sum(sumc, c)[0];
+
+    var multiplyc = multiply(a, b)[0];
+    var multiplyd = multiply(multiplyc ,c)[0];
+
+
+    var msg1 = `${a} and ${b} and ${c} sum to ${sumd}.`
+
+    var msg2 = `The product of ${a} and ${b} and ${c} is ${multiplyd}.`
+
+    // console.log (sumd, multiplyd, msg1, msg2);
+    return [sumd, multiplyd, msg1, msg2];
+
+    //eslint-disable-line
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// 4,7,5
-// testSumAndMultiply();
+4, 7, 5
+testSumAndMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -128,7 +144,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 

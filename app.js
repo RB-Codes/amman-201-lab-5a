@@ -63,7 +63,7 @@ function sumAndMultiply(a, b, c) {
     var sumd = sum(sumc, c)[0];
 
     var multiplyc = multiply(a, b)[0];
-    var multiplyd = multiply(multiplyc ,c)[0];
+    var multiplyd = multiply(multiplyc, c)[0];
 
 
     var msg1 = `${a} and ${b} and ${c} sum to ${sumd}.`
@@ -96,13 +96,25 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(testArray) { //eslint-disable-line
 
+
+    var sume = sum(2, 3)[0];
+    var sumf = sum(sume, 4)[0];
+
+    // console.log(sumf)
+
+
+    var msg = `${2},${3},${4} was passed in as an array of numbers, and ${sumf} is their sum.`
+
+
+
+    return [sumf, msg];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-//testArray
-// testSumArray();
+testArray
+testSumArray();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -119,11 +131,19 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+    var multe = multiply(2, 3)[0];
+    var multf = multiply(multe, 4)[0];
+
+    // console.log(multf)
+
+    var msg = `The numbers 2,3,4 have a product of ${multf}.`
+
+    return [multf, msg];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testArray
-// testMultiplyArray();
+testArray
+testMultiplyArray();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 

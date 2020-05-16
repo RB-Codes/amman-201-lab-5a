@@ -131,8 +131,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
-    
-}
+    var multe = multiply(2, 3)[0];
+    var multf = multiply(multe, 4)[0];
+
+    // console.log(multf)
+
+    var msg = `The numbers 2,3,4 have a product of ${multf}.`
+
+    return [multf, msg];
+} 
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 testArray
